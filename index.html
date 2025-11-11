@@ -5,117 +5,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fixeve ホーム</title>
 <style>
-    body {
-        font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-        margin: 0;
-        background-color: #b3e5fc;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        min-height: 100vh;
-    }
-
-    h1 {
-        margin-top: 10px;
-        font-size: 22px;
-        font-weight: bold;
-    }
-
-    .main-btn {
-        width: 80%;
-        max-width: 400px;
-        background-color: white;
-        border-radius: 10px;
-        padding: 30px;
-        margin: 15px 0;
-        text-align: center;
-        font-size: 26px;
-        font-weight: bold;
-        cursor: pointer;
-        text-decoration: none;
-        color: black;
-        transition: 0.2s;
-    }
-
-    .main-btn:hover {
-        transform: scale(1.03);
-        background-color: #e3f2fd;
-    }
-
-    .row {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 90%;
-        max-width: 600px;
-    }
-
-    .small-btn {
-        width: 45%;
-        background-color: white;
-        border-radius: 10px;
-        margin: 10px;
-        padding: 20px;
-        text-align: center;
-        cursor: pointer;
-        text-decoration: none;
-        color: black;
-        font-size: 18px;
-        transition: 0.2s;
-    }
-
-    .small-btn:hover {
-        transform: scale(1.05);
-        background-color: #e3f2fd;
-    }
-
-    @media (orientation: landscape) {
-        .row {
-            flex-direction: row;
-            justify-content: space-around;
-        }
-        .small-btn {
-            width: 40%;
-        }
-    }
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    background-color: #cce7ff;
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+  }
+  h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  .button {
+    display: inline-block;
+    background-color: #fff;
+    padding: 25px;
+    width: 200px;
+    height: 120px;
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-size: 22px;
+    text-decoration: none;
+    color: #000;
+    line-height: 120px;
+    transition: transform 0.2s;
+  }
+  .button:hover {
+    transform: scale(1.05);
+  }
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
 </style>
 </head>
 <body>
-    <h1>Fixeve</h1>
-
-    <a href="https://fixeve.github.io/fixeve-timer/" class="main-btn">タイマー</a>
-
-    <div class="row">
-        <a href="https://fixeve.github.io/fixeve-calendar/" class="small-btn">
-            カレンダー<br><small>昨日の時間: <span id="yesterdayTime">00:00</span></small>
-        </a>
-        <a href="https://fixeve.github.io/fixeve-goal/" class="small-btn">
-            目標<br><small>一日 / 週間 / 月間 / 年間</small>
-        </a>
-        <a href="https://fixeve.github.io/fixeve-todo/" class="small-btn">To Do リスト</a>
-        <a href="https://fixeve.github.io/fixeve-other/" class="small-btn">その他</a>
-    </div>
-
-<script>
-    // --- JST基準の日付を取得 ---
-    function getJSTDate(offset = 0) {
-        const now = new Date();
-        now.setHours(now.getHours() + 9 + 24 * offset);
-        return now.toISOString().split("T")[0];
-    }
-
-    // --- 昨日の勉強時間を取得 ---
-    function loadYesterdayTime() {
-        const data = JSON.parse(localStorage.getItem("fixeve_study_log") || "{}");
-        const yKey = getJSTDate(-1);
-        const seconds = data[yKey] || 0;
-        const h = String(Math.floor(seconds / 3600)).padStart(2, "0");
-        const m = String(Math.floor((seconds % 3600) / 60)).padStart(2, "0");
-        document.getElementById("yesterdayTime").textContent = `${h}:${m}`;
-    }
-
-    loadYesterdayTime();
-</script>
+  <h1>Fixeve</h1>
+  <div class="grid">
+    <a href="https://fixeve.github.io/fixeve-timer/" class="button">タイマー</a>
+    <a href="https://fixeve.github.io/fixeve-report/" class="button">レポート</a>
+    <a href="https://fixeve.github.io/fixeve-goal/" class="button">目標</a>
+    <a href="https://fixeve.github.io/fixeve-todo/" class="button">To Do リスト</a>
+    <a href="https://fixeve.github.io/fixeve-other/" class="button">その他</a>
+  </div>
 </body>
 </html>
