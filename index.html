@@ -3,54 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fixeve ホーム</title>
+<title>Fixeve Home</title>
 <style>
   body {
-    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-    background-color: #cce7ff;
+    background-color: #eef6ff;
+    font-family: "Arial", sans-serif;
     text-align: center;
     margin: 0;
-    padding: 30px;
+    padding: 50px 10px;
   }
   h1 {
-    font-size: 32px;
-    margin-bottom: 30px;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
   }
-  .button {
-    display: inline-block;
-    background-color: #fff;
-    padding: 25px;
-    width: 200px;
-    height: 120px;
-    margin: 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    font-size: 22px;
-    text-decoration: none;
-    color: #000;
-    line-height: 120px;
-    transition: transform 0.2s;
-  }
-  .button:hover {
-    transform: scale(1.05);
-  }
-  .grid {
+  .button-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    max-width: 500px;
-    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  a {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 22px;
+    color: white;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+  }
+  a:hover {
+    background-color: #0056b3;
   }
 </style>
 </head>
 <body>
   <h1>Fixeve</h1>
-  <div class="grid">
-    <a href="https://fixeve.github.io/fixeve-timer/" class="button">タイマー</a>
-    <a href="https://fixeve.github.io/fixeve-report/" class="button">レポート</a>
-    <a href="https://fixeve.github.io/fixeve-goal/" class="button">目標</a>
-    <a href="https://fixeve.github.io/fixeve-todo/" class="button">To Do リスト</a>
-    <a href="https://fixeve.github.io/fixeve-other/" class="button">その他</a>
+
+  <div class="button-container">
+    <a href="https://fixeve.github.io/fixeve-timer/">タイマー</a>
+    <a href="https://fixeve.github.io/fixeve-report/">レポート</a>
+    <a href="https://fixeve.github.io/fixeve-goal/">目標</a>
+    <a href="https://fixeve.github.io/fixeve-todo/">To Doリスト</a>
+    <a href="https://fixeve.github.io/fixeve-other/">その他</a>
   </div>
+
 </body>
 </html>
