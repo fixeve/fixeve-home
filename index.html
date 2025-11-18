@@ -3,51 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fixeve Home</title>
+<title>Fixeve ホーム</title>
 <style>
   body {
-    background-color: #eef6ff;
     font-family: "Arial", sans-serif;
     text-align: center;
+    background-color: #ffffff;
     margin: 0;
-    padding: 50px 10px;
+    padding: 0;
   }
+
   h1 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size: 32px;
   }
-  .button-container {
+
+  .menu {
+    margin-top: 50px;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
   }
-  a {
-    display: inline-block;
-    padding: 15px 40px;
-    font-size: 22px;
-    color: white;
+
+  .menu a {
+    display: block;
     background-color: #007bff;
+    color: white;
+    width: 70%;
+    padding: 18px;
     text-decoration: none;
+    font-size: 20px;
     border-radius: 10px;
-    transition: background-color 0.3s;
   }
-  a:hover {
-    background-color: #0056b3;
+
+  /* 追加：アプリロック紹介ボタン */
+  #app-lock-link {
+    display: block;
+    background-color: #6f42c1;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    margin: 40px auto;
+    width: 80%;
+    border-radius: 10px;
+    font-size: 18px;
   }
+
 </style>
 </head>
 <body>
-  <h1>Fixeve</h1>
 
-  <div class="button-container">
-    <a href="https://fixeve.github.io/fixeve-timer/">タイマー</a>
-    <a href="https://fixeve.github.io/fixeve-report/">レポート</a>
-    <a href="https://fixeve.github.io/fixeve-goal/">目標</a>
-    <a href="https://fixeve.github.io/fixeve-todo/">To Doリスト</a>
-    <a href="https://fixeve.github.io/fixeve-other/">その他</a>
-  </div>
+<h1>Fixeve ホーム</h1>
+
+<div class="menu">
+  <a href="https://fixeve.github.io/fixeve-timer/">タイマー</a>
+  <a href="https://fixeve.github.io/fixeve-report/">レポート</a>
+  <a href="https://fixeve.github.io/fixeve-goal/">目標</a>
+  <a href="https://fixeve.github.io/fixeve-todo/">ToDoリスト</a>
+  <a href="https://fixeve.github.io/fixeve-other/">その他</a>
+</div>
+
+<!-- 追加した部分 -->
+<a id="app-lock-link"
+   href="https://apps.apple.com/jp/app/アプリブロック-勉強や仕事に集中/id6745417442"
+   target="_blank">
+  他のアプリの使用を制限するアプリロック機能を追加したい方はこちらへ
+</a>
 
 </body>
 </html>
